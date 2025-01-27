@@ -137,7 +137,7 @@ while input != "7":
 
         # working with the number of variables that resulted in the highest recall score
         num_var = np.argsort(rec)[-1] + 1  # +1 because the 0th index is actually 1 variable
-        print("Varibale choices:", correlations[:num_var])
+        print("Variable choices:", correlations[:num_var])
         model = LogisticRegression()
         X_train = X[correlations[:num_var]]
         model.fit(X_train, y)
